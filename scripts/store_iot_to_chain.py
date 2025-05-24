@@ -3,15 +3,15 @@ import csv, json, os
 
 # 1) Connect to Ganache Desktop
 w3 = Web3(Web3.HTTPProvider("http://127.0.0.1:7545"))
-assert w3.is_connected(), "❌ Ganache not reachable at 7545"
+assert w3.is_connected(), "Ganache not reachable at 7545"
 
 # 2) Load ABI
 abi_path = os.path.join(os.path.dirname(__file__), "..", "artifacts", "IoTDataStorageABI.json")
 with open(abi_path) as f:
     abi = json.load(f)
 
-# 3) Set your newly deployed contract address (MAX_ENTRIES=200)
-raw_address = "0x7Adde9fB0D4292D271031386d15F1445b4c95556"  # ← paste here
+# 3)  deployed contract address (MAX_ENTRIES=200)
+raw_address = "0xF4B97C9C61c2EcEb30780c5750EB95694A703B88"  
 contract_address = Web3.to_checksum_address(raw_address)
 contract = w3.eth.contract(address=contract_address, abi=abi)
 
@@ -47,4 +47,4 @@ with open(csv_path, newline="") as csvfile:
 
 # 6) Final verification
 total = contract.functions.getTotalRecords().call()
-print("🎉 Done! Total on-chain entries:", total)  # should print 200
+print("🎉 Done! Total on-chain entries:", total) 

@@ -8,15 +8,15 @@
 		"anonymous": false,
 		"inputs": [
 			{
-				"indexed": true,
+				"indexed": false,
 				"internalType": "uint256",
 				"name": "timestamp",
 				"type": "uint256"
 			},
 			{
-				"indexed": true,
+				"indexed": false,
 				"internalType": "string",
-				"name": "shipmentId",
+				"name": "deviceId",
 				"type": "string"
 			},
 			{
@@ -39,7 +39,7 @@
 		"inputs": [
 			{
 				"internalType": "string",
-				"name": "_shipmentId",
+				"name": "_deviceId",
 				"type": "string"
 			},
 			{
@@ -75,7 +75,7 @@
 			},
 			{
 				"internalType": "string",
-				"name": "shipmentId",
+				"name": "deviceId",
 				"type": "string"
 			},
 			{
@@ -104,22 +104,22 @@
 		"outputs": [
 			{
 				"internalType": "uint256",
-				"name": "timestamp",
+				"name": "",
 				"type": "uint256"
 			},
 			{
 				"internalType": "string",
-				"name": "shipmentId",
+				"name": "",
 				"type": "string"
 			},
 			{
 				"internalType": "string",
-				"name": "dataType",
+				"name": "",
 				"type": "string"
 			},
 			{
 				"internalType": "string",
-				"name": "dataValue",
+				"name": "",
 				"type": "string"
 			}
 		],
