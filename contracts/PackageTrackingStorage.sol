@@ -136,7 +136,7 @@ contract PackageTrackingStorage {
         }
     }
 
-    function getPackage(string memory _trackingNumber)
+    function getPackage(string memory _trackingNumber) // we will not use id
         public
         view
         returns (
