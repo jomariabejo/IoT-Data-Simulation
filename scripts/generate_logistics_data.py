@@ -10,12 +10,9 @@ from dataclasses import dataclass, asdict
 from enum import Enum
 import uuid
 
-# Initialize Faker with specific providers
+# Initialize Faker properly - no need to manually add providers
 fake = Faker()
-fake.add_provider('address')
-fake.add_provider('company')
-fake.add_provider('date_time')
-fake.add_provider('person')
+
 
 class PackageStatus(Enum):
     PENDING = "Pending"
@@ -29,6 +26,7 @@ class PackageStatus(Enum):
     DAMAGED = "Damaged"
     LOST = "Lost"
 
+
 class PackageType(Enum):
     STANDARD = "Standard"
     EXPRESS = "Express"
@@ -39,12 +37,14 @@ class PackageType(Enum):
     REFRIGERATED = "Refrigerated"
     HAZMAT = "Hazardous Materials"
 
+
 class ShippingCarrier(Enum):
     UPS = "UPS"
     FEDEX = "FedEx"
     DHL = "DHL"
     USPS = "USPS"
     AMAZON = "Amazon Logistics"
+
 
 @dataclass
 class Location:
@@ -57,6 +57,7 @@ class Location:
     facility_name: str
     facility_type: str
 
+
 @dataclass
 class PackageDimensions:
     length: float
@@ -64,6 +65,7 @@ class PackageDimensions:
     height: float
     weight: float
     volume: float
+
 
 @dataclass
 class TrackingEvent:
@@ -76,6 +78,7 @@ class TrackingEvent:
     scan_type: str
     operator_id: str
 
+
 class EnumEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, Enum):
@@ -84,22 +87,58 @@ class EnumEncoder(json.JSONEncoder):
             return asdict(obj)
         return super().default(obj)
 
+
 class SmartLogisticsTrackingModel:
     def __init__(self):
         self.data_dir = "data"
         os.makedirs(self.data_dir, exist_ok=True)
-        
+
         # Initialize data structures
         self.facility_types = [
             "Sorting Center", "Distribution Hub", "Local Facility",
             "International Gateway", "Customs Clearance Center"
         ]
-        
+
         self.scan_types = [
             "Arrival Scan", "Departure Scan", "Out for Delivery Scan",
             "Delivery Scan", "Exception Scan", "Customs Scan"
         ]
-        
+
+        # Pre-defined list of major US cities to ensure realistic city names
+        self.us_cities = [
+            "New York", "Los Angeles", "Chicago", "Houston", "Phoenix", "Philadelphia",
+            "San Antonio", "San Diego", "Dallas", "San Jose", "Austin", "Jacksonville",
+            "Fort Worth", "Columbus", "Charlotte", "San Francisco", "Indianapolis",
+            "Seattle", "Denver", "Washington", "Boston", "El Paso", "Nashville",
+            "Detroit", "Oklahoma City", "Portland", "Las Vegas", "Memphis", "Louisville",
+            "Baltimore", "Milwaukee", "Albuquerque", "Tucson", "Fresno", "Sacramento",
+            "Kansas City", "Mesa", "Virginia Beach", "Atlanta", "Colorado Springs",
+            "Omaha", "Raleigh", "Miami", "Oakland", "Minneapolis", "Tulsa", "Cleveland",
+            "Wichita", "Arlington", "New Orleans", "Bakersfield", "Tampa", "Honolulu",
+            "Anaheim", "Aurora", "Santa Ana", "St. Louis", "Riverside", "Corpus Christi",
+            "Lexington", "Pittsburgh", "Anchorage", "Stockton", "Cincinnati", "St. Paul",
+            "Toledo", "Greensboro", "Newark", "Plano", "Henderson", "Lincoln", "Buffalo",
+            "Jersey City", "Chula Vista", "Fort Wayne", "Orlando", "St. Petersburg",
+            "Chandler", "Laredo", "Norfolk", "Durham", "Madison", "Lubbock", "Irvine",
+            "Winston-Salem", "Glendale", "Garland", "Hialeah", "Reno", "Chesapeake",
+            "Gilbert", "Baton Rouge", "Irving", "Scottsdale", "North Las Vegas",
+            "Fremont", "Boise", "Richmond", "San Bernardino", "Birmingham", "Spokane"
+        ]
+
+        # US states list for more realistic state generation
+        self.us_states = [
+            "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado",
+            "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho",
+            "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana",
+            "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota",
+            "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada",
+            "New Hampshire", "New Jersey", "New Mexico", "New York",
+            "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon",
+            "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota",
+            "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington",
+            "West Virginia", "Wisconsin", "Wyoming"
+        ]
+
         # Initialize status templates with more detailed scenarios
         self.status_templates = {
             PackageStatus.PENDING: [
@@ -163,7 +202,7 @@ class SmartLogisticsTrackingModel:
                 "Package investigation initiated"
             ]
         }
-        
+
         # Exception reasons for more realistic scenarios
         self.exception_reasons = [
             "address issue", "recipient not available", "weather conditions",
@@ -174,16 +213,22 @@ class SmartLogisticsTrackingModel:
 
     def generate_location(self) -> Location:
         """Generate a realistic location with coordinates and facility information."""
-        city = fake.city()
-        state = fake.state()
-        zip_code = fake.zipcode()
-        facility_name = f"{fake.company()} {random.choice(self.facility_types)}"
+        # Use predefined city and state lists for more realistic data
+        city = random.choice(self.us_cities)
+        state = random.choice(self.us_states)
+
+        # Generate a proper ZIP code format
+        zip_code = f"{random.randint(10000, 99999)}"
+
+        # Generate facility name using fake company name
+        company_name = fake.company()
         facility_type = random.choice(self.facility_types)
-        
+        facility_name = f"{company_name} {facility_type}"
+
         # Generate realistic coordinates within the US
-        latitude = random.uniform(24.396308, 49.384358)  # US latitude range
-        longitude = random.uniform(-125.000000, -66.934570)  # US longitude range
-        
+        latitude = round(random.uniform(24.396308, 49.384358), 6)  # US latitude range
+        longitude = round(random.uniform(-125.000000, -66.934570), 6)  # US longitude range
+
         return Location(
             city=city,
             state=state,
@@ -202,7 +247,7 @@ class SmartLogisticsTrackingModel:
         height = round(random.uniform(5, 100), 2)
         weight = round(random.uniform(0.5, 50.0), 2)
         volume = round(length * width * height, 2)
-        
+
         return PackageDimensions(
             length=length,
             width=width,
@@ -211,16 +256,16 @@ class SmartLogisticsTrackingModel:
             volume=volume
         )
 
-    def generate_tracking_event(self, 
-                              status: PackageStatus,
-                              carrier: ShippingCarrier,
-                              location: Location) -> TrackingEvent:
+    def generate_tracking_event(self,
+                                status: PackageStatus,
+                                carrier: ShippingCarrier,
+                                location: Location) -> TrackingEvent:
         """Generate a detailed tracking event."""
         event_id = str(uuid.uuid4())
         timestamp = fake.date_time_this_month()
         scan_type = random.choice(self.scan_types)
         operator_id = f"OP{fake.random_number(digits=6)}"
-        
+
         # Generate description based on status
         template = random.choice(self.status_templates[status])
         description = template.format(
@@ -228,7 +273,7 @@ class SmartLogisticsTrackingModel:
             carrier=carrier.value,
             reason=random.choice(self.exception_reasons) if status == PackageStatus.EXCEPTION else ""
         )
-        
+
         return TrackingEvent(
             event_id=event_id,
             timestamp=timestamp.strftime("%Y-%m-%d %H:%M:%S"),
@@ -240,14 +285,14 @@ class SmartLogisticsTrackingModel:
             operator_id=operator_id
         )
 
-    def generate_tracking_history(self, 
-                                package_type: PackageType,
-                                carrier: ShippingCarrier) -> List[Dict]:
+    def generate_tracking_history(self,
+                                  package_type: PackageType,
+                                  carrier: ShippingCarrier) -> List[Dict]:
         """Generate a realistic tracking history based on package type."""
         history = []
         current_status = PackageStatus.PENDING
         current_location = self.generate_location()
-        
+
         # Generate appropriate number of events based on package type
         num_events = {
             PackageType.STANDARD: random.randint(4, 6),
@@ -259,11 +304,11 @@ class SmartLogisticsTrackingModel:
             PackageType.REFRIGERATED: random.randint(3, 5),
             PackageType.HAZMAT: random.randint(5, 7)
         }[package_type]
-        
+
         for _ in range(num_events):
             event = self.generate_tracking_event(current_status, carrier, current_location)
             history.append(asdict(event))
-            
+
             # Update status and location for next event
             if current_status == PackageStatus.PENDING:
                 current_status = PackageStatus.PROCESSING
@@ -284,37 +329,37 @@ class SmartLogisticsTrackingModel:
                     current_status = PackageStatus.IN_TRANSIT
                 else:
                     current_status = PackageStatus.RETURNED
-            
+
             current_location = self.generate_location()
-        
+
         return history
 
-    def generate_package_data(self, num_packages: int = 20000) -> List[Dict]:
+    def generate_package_data(self, num_packages: int = 200) -> List[Dict]:
         """Generate comprehensive package tracking data."""
         packages = []
-        
+
         for _ in tqdm(range(num_packages), desc="Generating package data"):
             # Generate basic package information
             package_type = random.choice(list(PackageType))
             carrier = random.choice(list(ShippingCarrier))
             dimensions = self.generate_dimensions()
-            
+
             # Generate tracking number based on carrier
             tracking_number = f"{carrier.value[:3]}{fake.random_number(digits=9)}"
-            
+
             # Generate tracking history
             tracking_history = self.generate_tracking_history(package_type, carrier)
-            
+
             # Get final status from tracking history
             final_status = tracking_history[-1]["status"]
-            
+
             # Generate package description
             package_description = (
                 f"{package_type.value} package weighing {dimensions.weight}kg, "
                 f"dimensions: {dimensions.length}x{dimensions.width}x{dimensions.height}cm, "
                 f"volume: {dimensions.volume}cm³"
             )
-            
+
             package = {
                 "tracking_number": tracking_number,
                 "package_type": package_type.value,
@@ -326,8 +371,8 @@ class SmartLogisticsTrackingModel:
                 "current_status": final_status,
                 "estimated_delivery": fake.date_time_this_month().strftime("%Y-%m-%d %H:%M:%S"),
                 "actual_delivery": (
-                    tracking_history[-1]["timestamp"] 
-                    if final_status == PackageStatus.DELIVERED.value 
+                    tracking_history[-1]["timestamp"]
+                    if final_status == PackageStatus.DELIVERED.value
                     else None
                 ),
                 "description": package_description,
@@ -335,9 +380,9 @@ class SmartLogisticsTrackingModel:
                 "insurance_value": round(random.uniform(100, 5000), 2) if random.random() < 0.3 else None,
                 "signature_required": random.random() < 0.4
             }
-            
+
             packages.append(package)
-        
+
         return packages
 
     def save_to_json(self, data: List[Dict], filename: str = "logistics_data.json"):
@@ -352,7 +397,7 @@ class SmartLogisticsTrackingModel:
         """Save generated data to a CSV file with flattened structure."""
         print(f"\nConverting data to CSV format...")
         flattened_data = []
-        
+
         for package in tqdm(data, desc="Converting to CSV format"):
             flat_package = {
                 "tracking_number": package["tracking_number"],
@@ -378,33 +423,35 @@ class SmartLogisticsTrackingModel:
                 "description": package["description"]
             }
             flattened_data.append(flat_package)
-        
+
         df = pd.DataFrame(flattened_data)
         filepath = os.path.join(self.data_dir, filename)
         print(f"Saving CSV data to {filepath}...")
         df.to_csv(filepath, index=False)
         print(f"CSV data saved successfully!")
 
+
 def main():
     try:
         model = SmartLogisticsTrackingModel()
-        num_packages = 2000
-        
+        num_packages = 200
+
         print(f"Generating {num_packages} package records...")
         logistics_data = model.generate_package_data(num_packages)
-        
+
         # Save data in both JSON and CSV formats
         model.save_to_json(logistics_data)
         model.save_to_csv(logistics_data)
-        
+
         print("\nData generation completed successfully!")
         print(f"Generated {num_packages} package records")
         print("Files saved in the 'data' directory:")
         print("- logistics_data.json")
         print("- logistics_data.csv")
-        
+
     except Exception as e:
         print(f"An error occurred: {str(e)}")
+
 
 if __name__ == "__main__":
     main()
