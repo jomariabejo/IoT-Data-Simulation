@@ -137,21 +137,21 @@ contract PackageTrackingStorage {
     }
 
     function getPackage(string memory _trackingNumber) // we will not use id
-        public
-        view
-        returns (
-            string memory trackingNumber,
-            string memory packageType,
-            string memory carrier,
-            string memory currentStatus,
-            uint256 weight,
-            uint256 volume,
-            string memory originCity,
-            string memory destinationCity,
-            uint256 estimatedDelivery,
-            uint256 actualDelivery,
-            bool signatureRequired
-        )
+    public
+    view
+    returns (
+        string memory trackingNumber,
+        string memory packageType,
+        string memory carrier,
+        string memory currentStatus,
+        uint256 weight,
+        uint256 volume,
+        string memory originCity,
+        string memory destinationCity,
+        uint256 estimatedDelivery,
+        uint256 actualDelivery,
+        bool signatureRequired
+    )
     {
         require(trackingNumberExists[_trackingNumber], "Package not found");
 
@@ -174,17 +174,17 @@ contract PackageTrackingStorage {
     }
 
     function getTrackingEvent(uint256 _eventIndex)
-        public
-        view
-        returns (
-            string memory trackingNumber,
-            uint256 timestamp,
-            string memory status,
-            string memory location,
-            string memory description,
-            string memory scanType,
-            string memory operatorId
-        )
+    public
+    view
+    returns (
+        string memory trackingNumber,
+        uint256 timestamp,
+        string memory status,
+        string memory location,
+        string memory description,
+        string memory scanType,
+        string memory operatorId
+    )
     {
         require(_eventIndex < trackingEvents.length, "Event index out of bounds");
 
@@ -209,9 +209,9 @@ contract PackageTrackingStorage {
     }
 
     function getEventsByTrackingNumber(string memory _trackingNumber)
-        public
-        view
-        returns (uint256[] memory)
+    public
+    view
+    returns (uint256[] memory)
     {
         require(trackingNumberExists[_trackingNumber], "Package not found");
 
@@ -236,4 +236,40 @@ contract PackageTrackingStorage {
 
         return eventIndices;
     }
+
+    function getPackageByIndex(uint256 index)
+    public
+    view
+    returns (
+        string memory trackingNumber,
+        string memory packageType,
+        string memory carrier,
+        string memory currentStatus,
+        uint256 weight,
+        uint256 volume,
+        string memory originCity,
+        string memory destinationCity,
+        uint256 estimatedDelivery,
+        uint256 actualDelivery,
+        bool signatureRequired
+    )
+    {
+        require(index < packages.length, "Package index out of bounds");
+
+        PackageInfo memory pkg = packages[index];
+        return (
+            pkg.trackingNumber,
+            pkg.packageType,
+            pkg.carrier,
+            pkg.currentStatus,
+            pkg.weight,
+            pkg.volume,
+            pkg.originCity,
+            pkg.destinationCity,
+            pkg.estimatedDelivery,
+            pkg.actualDelivery,
+            pkg.signatureRequired
+        );
+    }
+
 }

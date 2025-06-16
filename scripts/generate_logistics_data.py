@@ -385,7 +385,7 @@ class SmartLogisticsTrackingModel:
 
         return packages
 
-    def save_to_json(self, data: List[Dict], filename: str = "logistics_data.json"):
+    def save_to_json(self, data: List[Dict], filename: str = "../data/logistics_data.json"):
         """Save generated data to a JSON file."""
         filepath = os.path.join(self.data_dir, filename)
         print(f"\nSaving data to {filepath}...")

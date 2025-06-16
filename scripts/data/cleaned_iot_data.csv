@@ -1,0 +1,204 @@
+trackingNumber,packageType,carrier,currentStatus,weight,volume,originCity,destinationCity,estimatedDelivery,signatureRequired,numeric_weight,numeric_volume
+FED589630317,Overnight,FedEx,Out for Delivery,10890,76075,"New York, Louisiana","Albuquerque, West Virginia",2025-06-15 14:30:00,False,10890.0,76075.0
+FED312753720,Priority,FedEx,Out for Delivery,5720,170150,"Philadelphia, New York","Denver, Delaware",2025-06-15 14:30:00,False,5720.0,170150.0
+USP880847135,Standard,USPS,Pending,40850,143253,"Tucson, Pennsylvania","Cleveland, Wisconsin",2025-06-15 14:30:00,False,40850.0,143253.0
+UPS696893088,Overnight,UPS,unknown,46,20207,Scottsdale,Birmingham,1970-01-01 08:00:00,False,46.0,20207.0
+USP881766951,Refrigerated,USPS,unknown,30,124653,Newark,San Bernardino,1970-01-01 08:00:00,False,30.0,124653.0
+Ama344057257,Priority,Amazon Logistics,unknown,6,166210,Oakland,Durham,1970-01-01 08:00:00,False,6.0,166210.0
+Fed884849656,Standard,FedEx,unknown,29,43464,St. Petersburg,Greensboro,1970-01-01 08:00:00,False,29.0,43464.0
+Fed667173972,Refrigerated,FedEx,unknown,45,103205,Norfolk,North Las Vegas,1970-01-01 08:00:00,True,45.0,103205.0
+UPS831042621,Refrigerated,UPS,unknown,15,136515,Tulsa,Norfolk,1970-01-01 08:00:00,True,15.0,136515.0
+USP975039004,Refrigerated,USPS,unknown,16,158447,San Bernardino,Irvine,1970-01-01 08:00:00,False,16.0,158447.0
+UPS376424666,International,UPS,unknown,0,313021,Denver,Anaheim,1970-01-01 08:00:00,False,0.0,313021.0
+Fed899614214,Hazardous Materials,FedEx,unknown,32,264290,Spokane,New Orleans,1970-01-01 08:00:00,False,32.0,264290.0
+UPS71001151,Refrigerated,UPS,unknown,4,171559,Chandler,Norfolk,1970-01-01 08:00:00,False,4.0,171559.0
+Ama405821489,Priority,Amazon Logistics,unknown,49,143575,Richmond,Chula Vista,1970-01-01 08:00:00,True,49.0,143575.0
+Ama30823435,Refrigerated,Amazon Logistics,unknown,22,96025,New York,Tucson,1970-01-01 08:00:00,False,22.0,96025.0
+UPS434817994,Overnight,UPS,unknown,41,583280,Fresno,Fort Worth,1970-01-01 08:00:00,False,41.0,583280.0
+Fed923169164,Refrigerated,FedEx,unknown,28,10603,El Paso,Detroit,1970-01-01 08:00:00,False,28.0,10603.0
+DHL316896998,Refrigerated,DHL,unknown,11,203144,Durham,Madison,1970-01-01 08:00:00,False,11.0,203144.0
+Fed253353384,Overnight,FedEx,unknown,48,271029,San Jose,Jacksonville,1970-01-01 08:00:00,False,48.0,271029.0
+UPS927897906,Priority,UPS,unknown,29,48589,Lincoln,Boise,1970-01-01 08:00:00,True,29.0,48589.0
+DHL743513763,Express,DHL,unknown,15,464046,Oakland,Anchorage,1970-01-01 08:00:00,False,15.0,464046.0
+UPS463349927,Standard,UPS,unknown,36,259940,Boston,New Orleans,1970-01-01 08:00:00,False,36.0,259940.0
+USP389760454,International,USPS,unknown,19,123362,Miami,New York,1970-01-01 08:00:00,False,19.0,123362.0
+Fed187950544,Fragile,FedEx,unknown,28,81259,Henderson,Dallas,1970-01-01 08:00:00,False,28.0,81259.0
+DHL15556456,Overnight,DHL,unknown,11,217961,Orlando,Irvine,1970-01-01 08:00:00,False,11.0,217961.0
+UPS638164728,Hazardous Materials,UPS,unknown,44,25599,Baltimore,Lexington,1970-01-01 08:00:00,False,44.0,25599.0
+Ama793353228,Express,Amazon Logistics,unknown,46,71868,Newark,Glendale,1970-01-01 08:00:00,False,46.0,71868.0
+Ama763848400,Refrigerated,Amazon Logistics,unknown,20,20783,Riverside,Milwaukee,1970-01-01 08:00:00,False,20.0,20783.0
+DHL616168747,Express,DHL,unknown,1,41158,North Las Vegas,Scottsdale,1970-01-01 08:00:00,False,1.0,41158.0
+DHL732371928,Refrigerated,DHL,unknown,7,52493,New York,Baton Rouge,1970-01-01 08:00:00,True,7.0,52493.0
+Ama152123569,Standard,Amazon Logistics,unknown,45,44248,St. Paul,Greensboro,1970-01-01 08:00:00,False,45.0,44248.0
+Ama681971802,Overnight,Amazon Logistics,unknown,47,16958,Scottsdale,Baton Rouge,1970-01-01 08:00:00,True,47.0,16958.0
+USP432189189,Refrigerated,USPS,unknown,47,55051,Milwaukee,San Antonio,1970-01-01 08:00:00,False,47.0,55051.0
+USP546371376,Refrigerated,USPS,unknown,49,231622,Arlington,Irvine,1970-01-01 08:00:00,False,49.0,231622.0
+DHL648057699,Express,DHL,unknown,26,32758,Philadelphia,New Orleans,1970-01-01 08:00:00,False,26.0,32758.0
+UPS4476365,Priority,UPS,unknown,12,341991,Plano,Miami,1970-01-01 08:00:00,False,12.0,341991.0
+Fed354670623,Standard,FedEx,unknown,41,347910,Scottsdale,Norfolk,1970-01-01 08:00:00,False,41.0,347910.0
+DHL943576044,Express,DHL,unknown,13,26886,Spokane,El Paso,1970-01-01 08:00:00,True,13.0,26886.0
+Fed38364952,International,FedEx,unknown,38,33071,Detroit,San Bernardino,1970-01-01 08:00:00,False,38.0,33071.0
+UPS549025940,Express,UPS,unknown,40,35872,Buffalo,Boston,1970-01-01 08:00:00,False,40.0,35872.0
+UPS624719973,Overnight,UPS,unknown,10,38624,Anchorage,Cleveland,1970-01-01 08:00:00,True,10.0,38624.0
+DHL783072407,Overnight,DHL,unknown,19,42553,Cincinnati,Norfolk,1970-01-01 08:00:00,False,19.0,42553.0
+Ama563448418,Fragile,Amazon Logistics,unknown,4,23135,Toledo,Miami,1970-01-01 08:00:00,False,4.0,23135.0
+DHL62768248,Fragile,DHL,unknown,26,400628,San Antonio,Garland,1970-01-01 08:00:00,False,26.0,400628.0
+Ama434102527,Priority,Amazon Logistics,unknown,12,292504,Phoenix,Anchorage,1970-01-01 08:00:00,True,12.0,292504.0
+Ama345340785,Hazardous Materials,Amazon Logistics,unknown,6,313569,North Las Vegas,Washington,1970-01-01 08:00:00,True,6.0,313569.0
+UPS438518922,International,UPS,unknown,7,102109,Kansas City,Plano,1970-01-01 08:00:00,True,7.0,102109.0
+UPS580721285,Priority,UPS,unknown,43,105190,Laredo,Washington,1970-01-01 08:00:00,True,43.0,105190.0
+USP768908875,Fragile,USPS,unknown,13,153758,Seattle,Buffalo,1970-01-01 08:00:00,False,13.0,153758.0
+Ama136622056,Overnight,Amazon Logistics,unknown,13,251828,Phoenix,Indianapolis,1970-01-01 08:00:00,False,13.0,251828.0
+DHL334452748,Hazardous Materials,DHL,unknown,33,129822,Fresno,Irving,1970-01-01 08:00:00,True,33.0,129822.0
+Fed97045342,Express,FedEx,unknown,24,246764,Lubbock,Minneapolis,1970-01-01 08:00:00,False,24.0,246764.0
+USP709804722,Priority,USPS,unknown,21,125813,Atlanta,Dallas,1970-01-01 08:00:00,False,21.0,125813.0
+UPS959145133,International,UPS,unknown,46,194352,Arlington,Kansas City,1970-01-01 08:00:00,False,46.0,194352.0
+UPS667052746,Fragile,UPS,unknown,41,47544,Chicago,Sacramento,1970-01-01 08:00:00,False,41.0,47544.0
+Ama177828571,Refrigerated,Amazon Logistics,unknown,29,20426,Las Vegas,Charlotte,1970-01-01 08:00:00,True,29.0,20426.0
+USP405251488,Refrigerated,USPS,unknown,23,15256,Boston,Newark,1970-01-01 08:00:00,False,23.0,15256.0
+Fed387905271,Refrigerated,FedEx,unknown,21,61540,Lincoln,Philadelphia,1970-01-01 08:00:00,False,21.0,61540.0
+Ama82388690,Standard,Amazon Logistics,unknown,7,11412,Birmingham,Irvine,1970-01-01 08:00:00,False,7.0,11412.0
+USP317529694,Hazardous Materials,USPS,unknown,29,236592,Minneapolis,Omaha,1970-01-01 08:00:00,True,29.0,236592.0
+USP503836247,Standard,USPS,unknown,40,34782,Wichita,Fremont,1970-01-01 08:00:00,True,40.0,34782.0
+UPS633979436,International,UPS,unknown,17,19610,Milwaukee,St. Louis,1970-01-01 08:00:00,False,17.0,19610.0
+Ama492175821,Priority,Amazon Logistics,unknown,37,18492,Nashville,Laredo,1970-01-01 08:00:00,False,37.0,18492.0
+USP68669158,Fragile,USPS,unknown,4,158744,San Jose,Madison,1970-01-01 08:00:00,False,4.0,158744.0
+UPS545724831,Priority,UPS,unknown,33,29482,Boston,Denver,1970-01-01 08:00:00,False,33.0,29482.0
+USP342594200,Fragile,USPS,unknown,29,210738,St. Petersburg,Glendale,1970-01-01 08:00:00,False,29.0,210738.0
+Fed6686517,Overnight,FedEx,unknown,16,225576,Portland,Winston-Salem,1970-01-01 08:00:00,True,16.0,225576.0
+DHL830808891,Overnight,DHL,unknown,32,46712,San Francisco,Las Vegas,1970-01-01 08:00:00,True,32.0,46712.0
+Fed73186145,Express,FedEx,unknown,40,149191,Irvine,St. Louis,1970-01-01 08:00:00,False,40.0,149191.0
+Fed843639761,Priority,FedEx,unknown,32,146944,Birmingham,Tulsa,1970-01-01 08:00:00,True,32.0,146944.0
+USP662726031,Refrigerated,USPS,unknown,20,32935,St. Petersburg,Orlando,1970-01-01 08:00:00,False,20.0,32935.0
+UPS938213662,Refrigerated,UPS,unknown,37,148861,Chula Vista,Cincinnati,1970-01-01 08:00:00,False,37.0,148861.0
+UPS558661225,International,UPS,unknown,32,113797,Plano,Raleigh,1970-01-01 08:00:00,False,32.0,113797.0
+DHL578603014,Express,DHL,unknown,21,275309,Minneapolis,Raleigh,1970-01-01 08:00:00,True,21.0,275309.0
+DHL350478812,Refrigerated,DHL,unknown,21,26318,Seattle,Laredo,1970-01-01 08:00:00,False,21.0,26318.0
+UPS248122697,Hazardous Materials,UPS,unknown,22,419898,Baltimore,Colorado Springs,1970-01-01 08:00:00,True,22.0,419898.0
+USP99385229,International,USPS,unknown,10,63989,Indianapolis,Glendale,1970-01-01 08:00:00,True,10.0,63989.0
+Fed629829757,Priority,FedEx,unknown,23,17207,Baltimore,Gilbert,1970-01-01 08:00:00,False,23.0,17207.0
+USP725402099,Refrigerated,USPS,unknown,0,97760,New Orleans,Omaha,1970-01-01 08:00:00,False,0.0,97760.0
+UPS70817389,Express,UPS,unknown,20,7193,Santa Ana,Greensboro,1970-01-01 08:00:00,True,20.0,7193.0
+Fed467572744,Standard,FedEx,unknown,22,318307,Stockton,Omaha,1970-01-01 08:00:00,True,22.0,318307.0
+UPS623096001,Refrigerated,UPS,unknown,4,90734,Minneapolis,Lincoln,1970-01-01 08:00:00,True,4.0,90734.0
+Fed172701213,Hazardous Materials,FedEx,unknown,49,50176,San Francisco,Nashville,1970-01-01 08:00:00,False,49.0,50176.0
+UPS472284603,International,UPS,unknown,37,134270,Santa Ana,Anaheim,1970-01-01 08:00:00,False,37.0,134270.0
+Ama42568873,Fragile,Amazon Logistics,unknown,16,90524,Chicago,Hialeah,1970-01-01 08:00:00,True,16.0,90524.0
+UPS792071302,Express,UPS,unknown,28,55144,Santa Ana,Omaha,1970-01-01 08:00:00,True,28.0,55144.0
+Ama193210937,Refrigerated,Amazon Logistics,unknown,18,76708,Oklahoma City,Boise,1970-01-01 08:00:00,False,18.0,76708.0
+DHL488966761,Refrigerated,DHL,unknown,42,46948,Lubbock,Stockton,1970-01-01 08:00:00,False,42.0,46948.0
+Fed733012948,International,FedEx,unknown,12,229475,El Paso,San Bernardino,1970-01-01 08:00:00,False,12.0,229475.0
+Fed201282195,Fragile,FedEx,unknown,45,65046,San Antonio,Aurora,1970-01-01 08:00:00,True,45.0,65046.0
+Ama998287550,Refrigerated,Amazon Logistics,unknown,44,10592,San Bernardino,Hialeah,1970-01-01 08:00:00,True,44.0,10592.0
+UPS91132740,Overnight,UPS,unknown,33,239225,Seattle,Miami,1970-01-01 08:00:00,False,33.0,239225.0
+DHL533291270,Overnight,DHL,unknown,18,163071,Norfolk,Las Vegas,1970-01-01 08:00:00,False,18.0,163071.0
+Ama672964216,Overnight,Amazon Logistics,unknown,43,352961,Washington,Boston,1970-01-01 08:00:00,False,43.0,352961.0
+DHL681088709,Overnight,DHL,unknown,5,110845,Philadelphia,Fremont,1970-01-01 08:00:00,False,5.0,110845.0
+Fed87581390,Express,FedEx,unknown,14,122157,Raleigh,Denver,1970-01-01 08:00:00,False,14.0,122157.0
+Ama749688930,Refrigerated,Amazon Logistics,unknown,4,49296,Philadelphia,Lincoln,1970-01-01 08:00:00,False,4.0,49296.0
+UPS618945758,Priority,UPS,unknown,49,99224,St. Louis,Washington,1970-01-01 08:00:00,False,49.0,99224.0
+DHL563570188,Priority,DHL,unknown,35,744,Chula Vista,Boston,1970-01-01 08:00:00,True,35.0,744.0
+Fed441425940,Express,FedEx,unknown,29,73339,Seattle,Arlington,1970-01-01 08:00:00,False,29.0,73339.0
+DHL862057010,Overnight,DHL,unknown,35,45247,Plano,Mesa,1970-01-01 08:00:00,True,35.0,45247.0
+USP617377457,Refrigerated,USPS,unknown,18,111622,Buffalo,Chula Vista,1970-01-01 08:00:00,False,18.0,111622.0
+DHL224196183,Standard,DHL,unknown,33,20653,Hialeah,Detroit,1970-01-01 08:00:00,True,33.0,20653.0
+DHL129690344,Fragile,DHL,unknown,49,136094,New Orleans,Corpus Christi,1970-01-01 08:00:00,False,49.0,136094.0
+USP695741482,Refrigerated,USPS,unknown,15,208489,Hialeah,Irvine,1970-01-01 08:00:00,True,15.0,208489.0
+Ama673154191,Hazardous Materials,Amazon Logistics,unknown,24,57309,North Las Vegas,Columbus,1970-01-01 08:00:00,True,24.0,57309.0
+DHL293970152,Hazardous Materials,DHL,unknown,4,463210,Fort Worth,Toledo,1970-01-01 08:00:00,False,4.0,463210.0
+USP657471438,Hazardous Materials,USPS,unknown,35,294065,Riverside,Cincinnati,1970-01-01 08:00:00,False,35.0,294065.0
+USP639146153,Express,USPS,unknown,2,425181,Greensboro,Buffalo,1970-01-01 08:00:00,False,2.0,425181.0
+DHL255111865,International,DHL,unknown,35,281498,Fremont,Oklahoma City,1970-01-01 08:00:00,False,35.0,281498.0
+UPS151975679,Fragile,UPS,unknown,14,26555,San Antonio,Lubbock,1970-01-01 08:00:00,False,14.0,26555.0
+DHL65088569,Overnight,DHL,unknown,17,106910,Jersey City,Tulsa,1970-01-01 08:00:00,False,17.0,106910.0
+Ama41851136,Overnight,Amazon Logistics,unknown,25,31227,Norfolk,St. Petersburg,1970-01-01 08:00:00,True,25.0,31227.0
+Fed526231319,Priority,FedEx,unknown,40,39764,El Paso,Fort Wayne,1970-01-01 08:00:00,False,40.0,39764.0
+DHL566251712,International,DHL,unknown,14,692457,Cincinnati,Anaheim,1970-01-01 08:00:00,True,14.0,692457.0
+USP518482374,Priority,USPS,unknown,30,441645,Durham,Albuquerque,1970-01-01 08:00:00,False,30.0,441645.0
+UPS764855683,International,UPS,unknown,24,307987,Albuquerque,St. Louis,1970-01-01 08:00:00,True,24.0,307987.0
+Ama493057011,Overnight,Amazon Logistics,unknown,47,75624,Baltimore,Hialeah,1970-01-01 08:00:00,True,47.0,75624.0
+Fed49301976,Express,FedEx,unknown,38,105851,New Orleans,Anchorage,1970-01-01 08:00:00,False,38.0,105851.0
+USP801555183,Refrigerated,USPS,unknown,32,83790,Louisville,Memphis,1970-01-01 08:00:00,False,32.0,83790.0
+UPS700026383,Priority,UPS,unknown,49,3724,North Las Vegas,Virginia Beach,1970-01-01 08:00:00,True,49.0,3724.0
+DHL139388828,Hazardous Materials,DHL,unknown,11,154070,Santa Ana,Baltimore,1970-01-01 08:00:00,False,11.0,154070.0
+DHL732860844,Express,DHL,unknown,2,279849,Las Vegas,Norfolk,1970-01-01 08:00:00,False,2.0,279849.0
+UPS255960744,Hazardous Materials,UPS,unknown,8,373433,Arlington,Indianapolis,1970-01-01 08:00:00,False,8.0,373433.0
+Ama85713795,Hazardous Materials,Amazon Logistics,unknown,17,22963,Jersey City,Cincinnati,1970-01-01 08:00:00,False,17.0,22963.0
+Fed510539783,International,FedEx,unknown,17,62871,Portland,Gilbert,1970-01-01 08:00:00,False,17.0,62871.0
+Fed449645527,Standard,FedEx,unknown,29,42743,Chicago,Chesapeake,1970-01-01 08:00:00,True,29.0,42743.0
+UPS79081897,Priority,UPS,unknown,40,13368,Baton Rouge,Anchorage,1970-01-01 08:00:00,False,40.0,13368.0
+UPS451501127,Priority,UPS,unknown,11,253632,Fort Wayne,Austin,1970-01-01 08:00:00,False,11.0,253632.0
+USP716616680,Refrigerated,USPS,unknown,30,6124,Las Vegas,Anaheim,1970-01-01 08:00:00,False,30.0,6124.0
+UPS323639961,Priority,UPS,unknown,14,92649,Mesa,St. Paul,1970-01-01 08:00:00,False,14.0,92649.0
+DHL722452191,Priority,DHL,unknown,3,28325,Irving,Jacksonville,1970-01-01 08:00:00,False,3.0,28325.0
+DHL939077371,International,DHL,unknown,25,276290,Miami,Arlington,1970-01-01 08:00:00,True,25.0,276290.0
+Ama731958214,Express,Amazon Logistics,unknown,12,6662,Reno,Greensboro,1970-01-01 08:00:00,False,12.0,6662.0
+Fed36692322,Refrigerated,FedEx,unknown,18,274223,Portland,Baton Rouge,1970-01-01 08:00:00,False,18.0,274223.0
+DHL508316763,Overnight,DHL,unknown,20,117926,Irvine,Tulsa,1970-01-01 08:00:00,True,20.0,117926.0
+USP893934679,Refrigerated,USPS,unknown,16,12803,Laredo,Washington,1970-01-01 08:00:00,False,16.0,12803.0
+USP746905908,Standard,USPS,unknown,23,100774,Tampa,Corpus Christi,1970-01-01 08:00:00,True,23.0,100774.0
+USP9046634,Express,USPS,unknown,41,75948,Sacramento,Scottsdale,1970-01-01 08:00:00,False,41.0,75948.0
+Fed965762394,Priority,FedEx,unknown,6,3690,Glendale,Anchorage,1970-01-01 08:00:00,False,6.0,3690.0
+UPS93874310,Hazardous Materials,UPS,unknown,27,187046,Raleigh,Memphis,1970-01-01 08:00:00,True,27.0,187046.0
+UPS731544274,Refrigerated,UPS,unknown,23,133719,Nashville,Baton Rouge,1970-01-01 08:00:00,False,23.0,133719.0
+DHL147403490,Fragile,DHL,unknown,3,34257,Aurora,Winston-Salem,1970-01-01 08:00:00,True,3.0,34257.0
+Ama331244324,Overnight,Amazon Logistics,unknown,45,68524,Birmingham,Washington,1970-01-01 08:00:00,False,45.0,68524.0
+Fed99800251,Refrigerated,FedEx,unknown,21,94695,Cleveland,Indianapolis,1970-01-01 08:00:00,True,21.0,94695.0
+Ama371368766,Hazardous Materials,Amazon Logistics,unknown,8,10306,Orlando,San Antonio,1970-01-01 08:00:00,False,8.0,10306.0
+DHL396270925,Express,DHL,unknown,2,89882,North Las Vegas,Jacksonville,1970-01-01 08:00:00,False,2.0,89882.0
+Ama827081561,Standard,Amazon Logistics,unknown,42,3696,Richmond,Indianapolis,1970-01-01 08:00:00,False,42.0,3696.0
+DHL852955459,Standard,DHL,unknown,47,283152,Hialeah,Milwaukee,1970-01-01 08:00:00,False,47.0,283152.0
+DHL117428637,Standard,DHL,unknown,35,40634,Cincinnati,Stockton,1970-01-01 08:00:00,False,35.0,40634.0
+USP13341532,Fragile,USPS,unknown,45,86663,San Antonio,Los Angeles,1970-01-01 08:00:00,False,45.0,86663.0
+Ama535582584,Hazardous Materials,Amazon Logistics,unknown,4,597826,Anaheim,St. Paul,1970-01-01 08:00:00,False,4.0,597826.0
+USP398427789,International,USPS,unknown,7,479396,Dallas,Tulsa,1970-01-01 08:00:00,False,7.0,479396.0
+USP864735522,Priority,USPS,unknown,22,372574,Winston-Salem,Pittsburgh,1970-01-01 08:00:00,False,22.0,372574.0
+DHL729561260,International,DHL,unknown,28,337277,Phoenix,Cleveland,1970-01-01 08:00:00,False,28.0,337277.0
+DHL733387058,International,DHL,unknown,25,9183,San Jose,Indianapolis,1970-01-01 08:00:00,False,25.0,9183.0
+DHL891639222,Hazardous Materials,DHL,unknown,48,15179,Anaheim,Greensboro,1970-01-01 08:00:00,True,48.0,15179.0
+Fed388659968,Fragile,FedEx,unknown,24,20286,Phoenix,Minneapolis,1970-01-01 08:00:00,True,24.0,20286.0
+Fed68498581,Express,FedEx,unknown,8,326819,Scottsdale,Santa Ana,1970-01-01 08:00:00,False,8.0,326819.0
+USP826608873,Overnight,USPS,unknown,38,229675,Riverside,New Orleans,1970-01-01 08:00:00,True,38.0,229675.0
+DHL629418805,Priority,DHL,unknown,15,342221,Colorado Springs,Washington,1970-01-01 08:00:00,False,15.0,342221.0
+USP484049826,Standard,USPS,unknown,49,137463,Las Vegas,San Francisco,1970-01-01 08:00:00,False,49.0,137463.0
+Fed955505537,Express,FedEx,unknown,26,18528,Dallas,Toledo,1970-01-01 08:00:00,True,26.0,18528.0
+Ama264701227,Overnight,Amazon Logistics,unknown,21,23350,Oklahoma City,Seattle,1970-01-01 08:00:00,False,21.0,23350.0
+USP955583505,Standard,USPS,unknown,13,18204,Spokane,Denver,1970-01-01 08:00:00,True,13.0,18204.0
+Ama327457746,International,Amazon Logistics,unknown,17,74014,St. Louis,Washington,1970-01-01 08:00:00,False,17.0,74014.0
+Ama614274811,Fragile,Amazon Logistics,unknown,35,83379,Jacksonville,Irving,1970-01-01 08:00:00,True,35.0,83379.0
+UPS754354339,Express,UPS,unknown,33,10433,Newark,Madison,1970-01-01 08:00:00,True,33.0,10433.0
+DHL119982687,Overnight,DHL,unknown,22,8709,Columbus,Norfolk,1970-01-01 08:00:00,False,22.0,8709.0
+USP655990548,Standard,USPS,unknown,16,32262,Bakersfield,Chandler,1970-01-01 08:00:00,False,16.0,32262.0
+Fed706239340,Overnight,FedEx,unknown,44,58723,Oklahoma City,Tulsa,1970-01-01 08:00:00,True,44.0,58723.0
+USP353442106,Fragile,USPS,unknown,22,262048,Memphis,Toledo,1970-01-01 08:00:00,False,22.0,262048.0
+USP478568456,Express,USPS,unknown,30,50901,Chandler,Durham,1970-01-01 08:00:00,True,30.0,50901.0
+UPS250099432,International,UPS,unknown,7,8589,Washington,St. Louis,1970-01-01 08:00:00,False,7.0,8589.0
+Ama68686134,Express,Amazon Logistics,unknown,41,226425,Chicago,Chesapeake,1970-01-01 08:00:00,False,41.0,226425.0
+UPS919327072,Hazardous Materials,UPS,unknown,40,136398,Plano,Sacramento,1970-01-01 08:00:00,False,40.0,136398.0
+DHL500150404,Refrigerated,DHL,unknown,19,130385,Milwaukee,Birmingham,1970-01-01 08:00:00,False,19.0,130385.0
+Fed334844466,Overnight,FedEx,unknown,42,10014,Durham,Garland,1970-01-01 08:00:00,False,42.0,10014.0
+USP785079524,Priority,USPS,unknown,27,40179,Sacramento,Toledo,1970-01-01 08:00:00,False,27.0,40179.0
+DHL586118155,Overnight,DHL,unknown,44,471731,Anaheim,Laredo,1970-01-01 08:00:00,True,44.0,471731.0
+UPS411816016,Standard,UPS,unknown,6,9056,San Jose,Indianapolis,1970-01-01 08:00:00,False,6.0,9056.0
+UPS326278424,International,UPS,unknown,3,32071,Omaha,Madison,1970-01-01 08:00:00,True,3.0,32071.0
+USP410789393,International,USPS,unknown,25,495456,Toledo,Austin,1970-01-01 08:00:00,True,25.0,495456.0
+UPS192969839,International,UPS,unknown,12,288679,Chicago,Austin,1970-01-01 08:00:00,False,12.0,288679.0
+Fed989799287,Express,FedEx,unknown,17,10624,Jacksonville,Philadelphia,1970-01-01 08:00:00,True,17.0,10624.0
+Fed962181532,Overnight,FedEx,unknown,45,284045,Toledo,Greensboro,1970-01-01 08:00:00,False,45.0,284045.0
+UPS623263577,Overnight,UPS,unknown,37,113984,Tucson,St. Petersburg,1970-01-01 08:00:00,True,37.0,113984.0
+DHL629219487,Priority,DHL,unknown,43,553748,Seattle,Milwaukee,1970-01-01 08:00:00,False,43.0,553748.0
+DHL239807881,Fragile,DHL,unknown,2,445371,Henderson,Tucson,1970-01-01 08:00:00,False,2.0,445371.0
+Fed90395691,Express,FedEx,unknown,34,50106,Baltimore,Newark,1970-01-01 08:00:00,False,34.0,50106.0
+DHL425205300,Refrigerated,DHL,unknown,46,51711,Wichita,Miami,1970-01-01 08:00:00,False,46.0,51711.0
+DHL744264450,Express,DHL,unknown,44,134817,Detroit,Louisville,1970-01-01 08:00:00,False,44.0,134817.0
+UPS981118917,Standard,UPS,unknown,24,298887,New York,Fremont,1970-01-01 08:00:00,False,24.0,298887.0
+USP808249439,Express,USPS,unknown,37,240933,San Jose,Chula Vista,1970-01-01 08:00:00,True,37.0,240933.0
+Fed943693988,Hazardous Materials,FedEx,unknown,13,37992,Oklahoma City,Arlington,1970-01-01 08:00:00,False,13.0,37992.0
+Ama294313049,Hazardous Materials,Amazon Logistics,unknown,40,214423,Irving,Tulsa,1970-01-01 08:00:00,True,40.0,214423.0
+Ama790422508,Standard,Amazon Logistics,unknown,25,68756,San Francisco,Chesapeake,1970-01-01 08:00:00,True,25.0,68756.0
+Ama394244054,Express,Amazon Logistics,unknown,24,383141,Philadelphia,Fort Worth,1970-01-01 08:00:00,True,24.0,383141.0
+DHL320252748,Refrigerated,DHL,unknown,9,44329,Philadelphia,Boise,1970-01-01 08:00:00,False,9.0,44329.0
+UPS378297191,Fragile,UPS,unknown,13,198215,Boston,El Paso,1970-01-01 08:00:00,True,13.0,198215.0
+Ama253365559,International,Amazon Logistics,unknown,38,23898,Raleigh,Spokane,1970-01-01 08:00:00,False,38.0,23898.0
+Ama496530668,Overnight,Amazon Logistics,unknown,15,53271,Las Vegas,San Jose,1970-01-01 08:00:00,False,15.0,53271.0
+DHL708040325,Standard,DHL,unknown,48,128276,Jacksonville,Milwaukee,1970-01-01 08:00:00,False,48.0,128276.0
