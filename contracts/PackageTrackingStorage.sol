@@ -14,6 +14,7 @@ contract PackageTrackingStorage {
         uint256 estimatedDelivery;
         uint256 actualDelivery;
         bool signatureRequired;
+        uint256 timestamp;
     }
 
     struct TrackingEvent {
@@ -32,7 +33,6 @@ contract PackageTrackingStorage {
     PackageInfo[] public packages;
     TrackingEvent[] public trackingEvents;
 
-    // Mapping from tracking number to package index
     mapping(string => uint256) public trackingNumberToIndex;
     mapping(string => bool) public trackingNumberExists;
 
@@ -87,7 +87,8 @@ contract PackageTrackingStorage {
             destinationCity: _destinationCity,
             estimatedDelivery: _estimatedDelivery,
             actualDelivery: 0,
-            signatureRequired: _signatureRequired
+            signatureRequired: _signatureRequired,
+            timestamp: block.timestamp
         }));
 
         uint256 packageIndex = packages.length - 1;
@@ -136,7 +137,7 @@ contract PackageTrackingStorage {
         }
     }
 
-    function getPackage(string memory _trackingNumber) // we will not use id
+    function getPackage(string memory _trackingNumber)
     public
     view
     returns (
@@ -150,7 +151,8 @@ contract PackageTrackingStorage {
         string memory destinationCity,
         uint256 estimatedDelivery,
         uint256 actualDelivery,
-        bool signatureRequired
+        bool signatureRequired,
+        uint256 timestamp
     )
     {
         require(trackingNumberExists[_trackingNumber], "Package not found");
@@ -169,7 +171,8 @@ contract PackageTrackingStorage {
             pkg.destinationCity,
             pkg.estimatedDelivery,
             pkg.actualDelivery,
-            pkg.signatureRequired
+            pkg.signatureRequired,
+            pkg.timestamp
         );
     }
 
@@ -215,7 +218,6 @@ contract PackageTrackingStorage {
     {
         require(trackingNumberExists[_trackingNumber], "Package not found");
 
-        // First, count matching events
         uint256 matchCount = 0;
         for (uint256 i = 0; i < trackingEvents.length; i++) {
             if (keccak256(bytes(trackingEvents[i].trackingNumber)) == keccak256(bytes(_trackingNumber))) {
@@ -223,7 +225,6 @@ contract PackageTrackingStorage {
             }
         }
 
-        // Create array of matching event indices
         uint256[] memory eventIndices = new uint256[](matchCount);
         uint256 currentIndex = 0;
 
@@ -251,7 +252,8 @@ contract PackageTrackingStorage {
         string memory destinationCity,
         uint256 estimatedDelivery,
         uint256 actualDelivery,
-        bool signatureRequired
+        bool signatureRequired,
+        uint256 timestamp
     )
     {
         require(index < packages.length, "Package index out of bounds");
@@ -268,8 +270,8 @@ contract PackageTrackingStorage {
             pkg.destinationCity,
             pkg.estimatedDelivery,
             pkg.actualDelivery,
-            pkg.signatureRequired
+            pkg.signatureRequired,
+            pkg.timestamp
         );
     }
-
 }

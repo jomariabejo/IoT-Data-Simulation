@@ -273,6 +273,11 @@
 				"internalType": "bool",
 				"name": "signatureRequired",
 				"type": "bool"
+			},
+			{
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -342,6 +347,11 @@
 				"internalType": "bool",
 				"name": "signatureRequired",
 				"type": "bool"
+			},
+			{
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -525,6 +535,11 @@
 				"internalType": "bool",
 				"name": "signatureRequired",
 				"type": "bool"
+			},
+			{
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",

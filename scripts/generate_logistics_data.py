@@ -36,6 +36,7 @@ class PackageType(Enum):
     FRAGILE = "Fragile"
     REFRIGERATED = "Refrigerated"
     HAZMAT = "Hazardous Materials"
+    HAZARDOUS_MATERIALS = "Hazardous Materials"
 
 
 class ShippingCarrier(Enum):
@@ -43,7 +44,7 @@ class ShippingCarrier(Enum):
     FEDEX = "FedEx"
     DHL = "DHL"
     USPS = "USPS"
-    AMAZON = "Amazon Logistics"
+    AMAZON_LOGISTICS = "Amazon Logistics"
 
 
 @dataclass
@@ -360,6 +361,17 @@ class SmartLogisticsTrackingModel:
                 f"volume: {dimensions.volume}cm³"
             )
 
+            # Generate estimated delivery date
+            estimated_delivery = fake.date_time_this_month()
+
+            # Determine actual delivery date - use estimated if not delivered
+            if final_status == PackageStatus.DELIVERED.value:
+                actual_delivery = tracking_history[-1]["timestamp"]
+            else:
+                # Add some variability - sometimes slightly before, sometimes after estimated
+                delta = timedelta(days=random.randint(-2, 5))
+                actual_delivery = (estimated_delivery + delta).strftime("%Y-%m-%d %H:%M:%S")
+
             package = {
                 "tracking_number": tracking_number,
                 "package_type": package_type.value,
@@ -369,12 +381,8 @@ class SmartLogisticsTrackingModel:
                 "destination": asdict(self.generate_location()),
                 "tracking_history": tracking_history,
                 "current_status": final_status,
-                "estimated_delivery": fake.date_time_this_month().strftime("%Y-%m-%d %H:%M:%S"),
-                "actual_delivery": (
-                    tracking_history[-1]["timestamp"]
-                    if final_status == PackageStatus.DELIVERED.value
-                    else None
-                ),
+                "estimated_delivery": estimated_delivery.strftime("%Y-%m-%d %H:%M:%S"),
+                "actual_delivery": actual_delivery,
                 "description": package_description,
                 "special_handling": package_type in [PackageType.FRAGILE, PackageType.REFRIGERATED, PackageType.HAZMAT],
                 "insurance_value": round(random.uniform(100, 5000), 2) if random.random() < 0.3 else None,
@@ -455,3 +463,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Last modified: 2023-11-15 14:30:00
